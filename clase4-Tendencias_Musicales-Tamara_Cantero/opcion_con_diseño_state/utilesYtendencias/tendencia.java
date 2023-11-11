@@ -10,15 +10,14 @@ public abstract class tendencia {
 	}
 	
 	
-	public abstract void mostrarMensaje(Cancion c);
+	public abstract String mostrarMensaje(Cancion c);
 	
 	
 	public tendencia verificarTendencia(Cancion c) {
 		String nameTend=c.getT().nombre;//nameTend: nombre de la tendencia
 		tendencia t;
 		
-		if(c.getReproducciones()<1000 
-		|| (nameTend.equals("EnAuge") && c.getDislikes()>=5000) 
+		if((nameTend.equals("EnAuge") && c.getDislikes()>=5000) 
 		|| (nameTend.equals("EnTendencia") && c.gethorasDesdeUltimaReproduccion()>24)) {
 	
 			t=new Normal();
@@ -29,7 +28,7 @@ public abstract class tendencia {
 			t=new EnAuge();
 			return t;
 		
-		}else if(c.getReproducciones()>50000 && c.getLikes()>20000){
+     		}else if(c.getReproducciones()>50000 && c.getLikes()>20000){
 		
 			t=new EnTendencia();
 			return t;
@@ -37,5 +36,10 @@ public abstract class tendencia {
 		}else {
 			return c.getT();
 		}
+	}
+	
+	public String getNombre() {
+		return nombre;
+		
 	}
 }

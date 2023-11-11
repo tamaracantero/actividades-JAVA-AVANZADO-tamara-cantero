@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="opcion_con_diseño_state"/>
 	<classpathentry kind="src" path="otra_opcion_propia"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

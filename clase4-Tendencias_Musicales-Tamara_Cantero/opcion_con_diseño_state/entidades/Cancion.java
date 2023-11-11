@@ -86,9 +86,9 @@ public class Cancion {
 		return t;
 	}
 
-	public void reproducir() {
+	public String reproducir() {
 		t=t.verificarTendencia(this);
-		t.mostrarMensaje(this);
+		return t.mostrarMensaje(this);
 		
 	}
 }

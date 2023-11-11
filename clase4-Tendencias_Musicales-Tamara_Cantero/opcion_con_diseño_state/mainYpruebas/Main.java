@@ -1,12 +1,12 @@
 package mainYpruebas;
 
 import utilesYtendencias.*;
-import entidades.Cancion1;
+import entidades.Cancion;
 public class Main {
 
 	public static void main(String[] args) {
 		/*public Cancion(String titulo, String artista, String album, int anioAlbum,int anioCancion)*/
-		Cancion1 c=new Cancion1("The Scientist", "Coldplay", "A Rush of Blood to the head", 2002,2002);
+		Cancion c=new Cancion("The Scientist", "Coldplay", "A Rush of Blood to the head", 2002,2002);
 		
 		System.out.println("caso de prueba 1:");
 		c.reproducir();
@@ -25,7 +25,7 @@ public class Main {
 		c.reproducir();
 		
 		System.out.println("caso de prueba 5:");
-		c.sethorasDesdeUltimaReproduccion(27);
+		c.sethorasDesdeUltimaReproduccion(10);
 		c.reproducir();
 		
 
